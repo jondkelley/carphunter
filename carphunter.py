@@ -8,9 +8,9 @@
 #pip2.7 install cryptography
 #pip2.7 uninstall gssapi
 #pip2.7 install unidecode
-#pip2.7 install yamlcfg
+###pip2.7 install yamlcfg
 #pip2.7 install prettytable
-#pip2.7 install configloader
+###pip2.7 install configloader
 #pip2.7 install loadconfig
 import sys
 from netmiko import ConnectHandler
@@ -23,7 +23,7 @@ import prettytable
 import argparse
 from loadconfig import Config
 
-parser = argparse.ArgumentParser(description="Cisco Arp Hunter v0.1 by Jon Kelley @ GVO", epilog="This Python based tool uses Netmiko to search your Cisco® branded routers and switches. This tool creates an ARP cache in a local json file (using --poll). --mac and -ip can be used to find MAC, IP, PORT and VLAN associations immediately against this json cache.")
+parser = argparse.ArgumentParser(description="Cisco Arp Hunter v0.1", epilog="This Python based tool uses Netmiko to search your Cisco® branded routers and switches. This tool creates an ARP cache in a local json file (using --poll). --mac and -ip can be used to find MAC, IP, PORT and VLAN associations immediately against this json cache.")
 parser.add_argument('-m', '--mac', action="store", dest="mac", help="Search json cache for MAC to port/vlan mappings")
 parser.add_argument('-i', '--ip', action="store", dest="ip", help="Search json cache for IP address to MAC mapping")
 parser.add_argument('--poll', action="store_true", default=False, dest="pollmode", help="Poll devices now and save to local json-cache-file")

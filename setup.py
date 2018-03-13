@@ -13,8 +13,8 @@ if __name__ == "__main__":
         version="0.1",
         author="Jonathan Kelley",
         author_email="jonkelley@gmail.com",
-        url="https://github.com/rackerlabs/zabbix_url_monitor",
-        license="BSD",
+        url="https://github.com/jondkelley/carphunter",
+        license="BSD License",
         packages=[package],
         package_dir={package: package},
         description=(
@@ -29,15 +29,18 @@ if __name__ == "__main__":
         ),
         classifiers=[
             'Intended Audience :: System Administrators',
-            'License :: OSI Approved :: Apache Software License',
+            'License :: OSI Approved :: BSD License',
             'Natural Language :: English',
             'Operating System :: OS Independent',
             'Programming Language :: Python',
             'Programming Language :: Python :: 2',
             'Programming Language :: Python :: 3',
             'Topic :: System :: Monitoring',
-            'Topic :: System :: Networking :: Monitoring',
+            'Topic :: System :: Networking',
             'Topic :: System :: Systems Administration ',
+            'Topic :: Utilities',
+            'Topic :: Internet',
+            'Topic :: Communications'
         ],
         entry_points={
             'console_scripts': ['carpfinder = carpfinder.main:main'],

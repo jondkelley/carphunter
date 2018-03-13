@@ -1,6 +1,8 @@
 # carphunter
 
-Carphunter is a Python-based network management tool that uses Netmiko to search your Cisco® branded routing/switching equipment. This tool is used to quickly examine recent IP, ARP, and VLAN associations across the  network.
+Own a datacenter? Want to allow network-operators to see the  ARP and IP assignments without logging in?
+
+Carphunter is a Python-based network management tool using netmiko libraries to search your Cisco® branded routing/switching equipment. This tool is used to quickly examine recent IP, ARP, and VLAN associations across the  network.
 
 ## Setup
 
@@ -25,7 +27,31 @@ This will save the networks arp database to /etc/carphunter.json every 10 minute
 
 #### 3) Edit configuration for your network
 
-TODO
+Change ```/etc/carphunter.yml``` to contain a default global user/password. Add your routers and switches, supplying an alternate password where neccessary for each device.
+
+    global:
+        user: "default_user"
+        password: "password"
+    devices:
+        routers:
+            10.16.16.2:
+                name: ROUTER-01
+                user: "router_user"
+                password: "router_password"
+            10.16.16.3:
+                name: ROUTER-02
+                user: "router_user"
+                password: "router_password"
+        switches:
+            172.16.16.10:
+                name: TX-DFW-DIST-A
+            172.16.16.20:
+                name: TX-DFW-DIST-B
+            172.16.16.31:
+                name: TX-DFW-DIST-A
+            172.16.16.31:
+                name: TX-DFW-DIST-A
+
 
 #### 4) Create initial database
 
@@ -33,10 +59,6 @@ This will test connectivity to your network build an initial database.
 
     carphunter --poll
    
-
-## How it works
-
-This tool uses json and Netmiko to poll all of your existing devices and stores a small database of items. This can be searched using the parameters --mac and --ip to display items in this json database.
 
 ## Command Examples
 
