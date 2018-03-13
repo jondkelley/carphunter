@@ -1,0 +1,23 @@
+global:
+    user: "user"
+    password: "password"
+devices:
+    routers:
+        10.16.16.2:
+            name: ROUTER-DFW-01
+    switches:
+        10.16.16.6:
+            name: SWITCH-001
+            user: "different_user"
+            password: "different_password"
+        10.16.16.7:
+            name: SWITCH-002
+        10.16.16.10:
+            name: SWITCH-003
+        10.16.16.21:
+            name: SWITCH-004
+        10.16.16.22:
+            name: SWITCH-005
+        10.16.16.24:
+            name: SWITCH-006
+
