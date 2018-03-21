@@ -43,7 +43,7 @@ if __name__ == "__main__":
             'Topic :: Communications'
         ],
         entry_points={
-            'console_scripts': ['carpfinder = carpfinder.main:main'],
+            'console_scripts': ['carpfinder = project.main:main'],
         },
         data_files=[('/etc', ['carpfinder.yaml'])],
         install_requires=[
@@ -54,6 +54,7 @@ if __name__ == "__main__":
             'prettytable',
             'loadconfig',
             'argparse',
+            'pytest'
         ]
     )
 
